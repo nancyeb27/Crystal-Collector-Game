@@ -1,14 +1,9 @@
-.crystals {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.crystal {
-    
-    border:1px solid green;
-    height: 200px;
+   
+   .crystal-image {
     width: 200px;
+    height: 200px;
 
 
-}
+   }
+
