@@ -34,34 +34,35 @@ $(document).ready(function () {
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
 
-        counter = (counter += crystalValue);
-        console.log(rocks);
-        console.log(crystalValue);
-        console.log(counter);
+        counter = (counter + crystalValue);
 
-        $("#crystalTotal").text(counter)
-
+        $("#crystalTotal").text(counter);
 
         alert("Your crystal total " + counter);
-        // console.log(counter);
-        // console.log(compNum);
+
 
         if (counter === compNum) {
             alert("You win");
             wins++;
             $("#winCounter").html(wins);
             counter = 0;
+            compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
 
-
         }
-        else if (counter > compNum); {
+        else if (counter !== compNum) {
+            alert("Pick another crystal");
+        }
+
+        else (counter > compNum) {
             alert("you lost");
             losses++;
             $("#lossCounter").html(losses);
             counter = 0;
+            compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
-        }
+            
+        }   
 
     });
     // Psuosto code
