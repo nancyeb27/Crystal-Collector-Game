@@ -46,6 +46,8 @@ $(document).ready(function () {
             $("#winCounter").html(wins);
             compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
+            $("#crystalTotal").text(counter);
+
 
         }
         else if (counter > compNum) {
@@ -56,7 +58,7 @@ $(document).ready(function () {
             $("#lossesCounter").html(losses);
             compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
-
+            $("#crystalTotal").text(counter);
         }
 
     });
