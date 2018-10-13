@@ -39,19 +39,21 @@ $(document).ready(function () {
 
 
         if (counter === compNum) {
-            alert("You win");
+            
+            alert("Your total is " + counter + " You win!!!");
+            counter = 0;
             wins++;
             $("#winCounter").html(wins);
-            counter = 0;
             compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
 
         }
         else if (counter > compNum) {
-            alert("you lost");
+            
+            alert("Your total is " + counter + " You lost, please try again!");
+            counter = 0;
             losses++;
             $("#lossesCounter").html(losses);
-            counter = 0;
             compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
 
