@@ -1,8 +1,5 @@
 $(document).ready(function () {
     var gemNum = "";
-    var crystal;
-    var winCounter;
-    var lossCounter;
     var wins = 0;
     var losses = 0;
 
@@ -38,7 +35,7 @@ $(document).ready(function () {
 
         $("#crystalTotal").text(counter);
 
-        alert("Your crystal total " + counter);
+        // alert("Your crystal total " + counter);
 
 
         if (counter === compNum) {
@@ -50,19 +47,15 @@ $(document).ready(function () {
             $("#randomNum").text(compNum);
 
         }
-        else if (counter !== compNum) {
-            alert("Pick another crystal");
-        }
-
-        else (counter > compNum) {
+        else if (counter > compNum) {
             alert("you lost");
             losses++;
-            $("#lossCounter").html(losses);
+            $("#lossesCounter").html(losses);
             counter = 0;
             compNum = Math.floor(Math.random() * 100) + 20;
             $("#randomNum").text(compNum);
-            
-        }   
+
+        }
 
     });
     // Psuosto code

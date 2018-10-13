@@ -4,46 +4,92 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>unit-4-game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Crystal Collector Game</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Link CSS  -->
     <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 
 </head>
 
 <body>
-
-    <h1>Crystal Collector</h1>
-
-    <h2>Number to guess: <span id="randomNum"></span> </h2>
-
-    <h3>Crystals Total: <span id ="crystalTotal"></span></h3>
-
-    <h3>Wins: <span id ="winCounter"></span></h3>
-    <h3>Losses: <span id ="lossesCounter"></span></h3>
-
-    <div id="crystals">
-
+    <!-- //Bootstrap jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">Crystal Collector Game</h1>
     </div>
 
-    <!-- <div>
-    
-    
+    <!-- Instructions for how to play the game-->
+    <div class="card-body">
+        <h4 class="card-title1">How to Play the Game</h4>
+        <p class="card-text">You will be given a random number at the start of the game.</p>
+        <p class="card-text">There are four crystals below. By clicking on a crystal you add a specific amount of
+            points to your total score.
+        </p>
+        <p class="card-text">You win the game by matching your total score to random number, you lose the game if your
+            total score goes above
+            the random number.</p>
+        <p class="card-text">The value of the crystal is hidden from you until you click on it.</p>
+        <p class="card-text">Each time when the game starts, the game will change the value of the crystal.</p>
+    </div>
 
-    <div>Wins:<span id = "wins"> 0 </span></div>
-    <div>Losses:<span id = "losses"> 0 </span></div>
-    <div>Guesses Left:<span id = "guessLeft"></span></div>
-    <div>Letters:<span id = "letters"></span></div>
- </div> -->
+    <div class="card-deck">
+        <!-- Target score -->
+        <div class="card">
+            <div class="card-header2">Target Score</div>
+            <div class="card-body">
+                <h5 class="card-title" id="randomNum">100</h5>
+            </div>
+        </div>
 
-    <!-- <img class="displayed"src="http://doubtfulnews.com/wp-content/uploads/2012/12/psychic.jpg" alt="psychic sign" > -->
+        <!-- Your score -->
+        <div class="card">
+            <div class="card-header2">Your Score</div>
+            <div class="card-body">
+                <h5 class="card-title" id="crystalTotal">0</h5>
+            </div>
+        </div>
 
+        <!-- Wins -->
+        <div class="card">
+            <div class="card-header2">Wins</div>
+            <div class="card-body">
+                <h5 class="card-title" id="winCounter">0</h5>
+            </div>
+        </div>
 
+        <!-- Losses -->
+        <div class="card">
+            <div class="card-header2">Losses</div>
+            <div class="card-body">
+                <h5 class="card-title" id="lossesCounter">0</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- -- Crystal Options and images -->
+    <hr>
+    <div class="card-header3">Crystal Options</div>
+    <hr>
+    <div class="row">
+    </div>
+
+    <div id="crystals">
+    </div>
+
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>
