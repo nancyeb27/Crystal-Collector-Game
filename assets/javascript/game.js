@@ -35,9 +35,7 @@ $(document).ready(function () {
 
         $("#crystalTotal").text(counter);
 
-        // alert("Your crystal total " + counter);
-
-
+        
         if (counter === compNum) {
             
             alert("Your total is " + counter + " You win!!!");
